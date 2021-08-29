@@ -34,7 +34,7 @@ import {
   
   const mobileLinks = [
     { name: "About", path: "/about" },
-    { name: "Open Source", path: "/open-source" },
+    { name: "Personal Projects & Contributions", path: "/projects" },
     { name: "Blog", path: "/blog" },
     { name: "Tech Stack", path: "/tech-stack" },
     { name: "Achievements", path: "/achievements" }
@@ -114,7 +114,7 @@ import {
                     as={Link}
                     name={"Josh Campbell"}
                     size={"sm"}
-                    src={"https://avatars.githubusercontent.com/u/63418265?v=4"}
+                    src={"/assets/images/photos/me.jpg"}
                   />
                 </NextLink>
               </Box>
@@ -175,20 +175,6 @@ import {
                                   color={menuProps.color}
                                 />
                                 <Text>Open Source</Text>
-                              </HStack>
-                            </MenuItem>
-                          </Link>
-                        </NextLink>
-                        <NextLink href={"/developer-story"} passHref>
-                          <Link onClick={onClose}>
-                            <MenuItem>
-                              <HStack>
-                                <Icon
-                                  as={MdTimeline}
-                                  size={18}
-                                  color={menuProps.color}
-                                />
-                                <Text>Developer Story</Text>
                               </HStack>
                             </MenuItem>
                           </Link>

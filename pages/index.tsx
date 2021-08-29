@@ -1,20 +1,20 @@
 import Home from "../components/home-page/home";
-import { projectsList } from "../data/projects-list";
+import MyStory from "../components/Career Journey/career";
+import { companies, institutes } from "../data/data";
 import PageLayout from "../components/layout/pageLayout";
 
-export default function Index({ projects }: any) {
+export default function Index({ companies, institutes }: any) {
   return (
     <PageLayout title="Josh Campbell - Software Engineer">
-      <Home projects={projects} />
+      <Home companies={companies} institutes={institutes} />
     </PageLayout>
   );
 }
 
 export function getStaticProps() {
-  const projects = projectsList;
   return {
     props: {
-      projects
-    }
+      companies, institutes
+    },
   };
 }

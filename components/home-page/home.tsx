@@ -12,17 +12,19 @@ import {
   } from "@chakra-ui/react";
   import { MotionBox, MotionFlex } from "../../components/ui/motion";
   import Header from "../../components/layout/header";
+  import MyStory from "../Career Journey/career"
   import Projects from "./projects";
   import NextLink from 'next/link'
+  import { companies, institutes } from "../../data/data";
   
   const ANIMATION_DURATION = 0.5;
   const ORANGE = "#ff9400";
   
-  interface HomeProps {
-    projects: project[];
-  }
+  // interface HomeProps {
+  //   projects: project[];
+  // }
 
-  const Home: React.FC<HomeProps> = ({ projects }) => {
+  const Home: React.FC<any> = () => {
   
     return (
       <Flex direction="column" align="center">
@@ -83,7 +85,7 @@ import {
               </Box>{" "}
               from{" "}
               <Box as="span" whiteSpace="nowrap">
-                Minnesota 🇺🇸
+                Minnesota ☃️
               </Box>
             </Box>
             <Box as="h2" fontSize="2xl" fontWeight="400" mt={5} textAlign="left">
@@ -125,20 +127,10 @@ import {
               </Text>
               <UnorderedList textAlign="left" paddingLeft={5} m={0}>
                 <ListItem>
-                  <NextLink href={'/open-source'} passHref>
+                  <NextLink href={'/projects'} passHref>
                     <Link>
-                      Live/Local Github Repos
-                    <Badge ml="1" colorScheme="green">
-                        New
-                    </Badge>
+                      Personal Projects & Contributions
                     </Link>
-                  </NextLink>
-                </ListItem>
-                <ListItem>
-                  <NextLink href={'/developer-story'} passHref>
-                    <Link>
-                      Story page
-                  </Link>
                   </NextLink>
                 </ListItem>
                 <ListItem>
@@ -157,7 +149,7 @@ import {
                 </ListItem>
               </UnorderedList>
             </Stack>
-            <Projects projects={projects} />
+            <MyStory companies={companies} institutes={institutes} />
           </Box>
         </MotionBox>
       </Flex>
