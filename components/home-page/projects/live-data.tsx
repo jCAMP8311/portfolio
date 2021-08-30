@@ -30,6 +30,7 @@ const LiveData = () => {
           res?.sort((a: { stargazers_count: number; }, b: { stargazers_count: number; }) => b.stargazers_count - a.stargazers_count).slice(0, 8)
         );
       });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
   return (
