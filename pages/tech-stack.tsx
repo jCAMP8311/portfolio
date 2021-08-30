@@ -44,7 +44,7 @@ const TechStack = ({ skills }: any) => {
     >
       <PageSlideFade>
         <VStack spacing={8}>
-          <Section>
+          <Section full>
             <VStack>
               <Header mt={0} mb={1}>
                 Tech Stack
@@ -60,7 +60,7 @@ const TechStack = ({ skills }: any) => {
               </Text>
             </VStack>
           </Section>
-          <Section>
+          <Section full>
             <Tabs
               variant="soft-rounded"
               colorScheme="blue"

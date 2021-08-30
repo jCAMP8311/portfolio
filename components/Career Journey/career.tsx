@@ -20,7 +20,7 @@ const MyStory = ({ companies, institutes }:any) => {
 
   return (
     <VStack>
-      <Section mb={14}>
+      <Section full mb={14}>
         <PageSlideFade>
           <VStack>
             <Header mt={0} mb={1}>
