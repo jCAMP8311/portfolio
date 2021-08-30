@@ -18,12 +18,10 @@ import {
   } from "@chakra-ui/react";
   import { GiHamburgerMenu } from "react-icons/gi";
   import { AiOutlineClose } from "react-icons/ai";
-  import { FaGithub } from "react-icons/fa";
   import { ColorModeSwitcher } from "../ui/ColorModeSwitcher";
   import { AiTwotoneThunderbolt } from "react-icons/ai";
   import { BiChevronDown } from "react-icons/bi";
   import { BsCheckCircle } from "react-icons/bs";
-  import { MdTimeline } from "react-icons/md";
   import { BsBook } from "react-icons/bs";
   import NextLink from "next/link";
   
@@ -165,7 +163,7 @@ import {
                             </MenuItem>
                           </Link>
                         </NextLink>
-                        <NextLink href={"/open-source"} passHref>
+                        <NextLink href={"/projects"} passHref>
                           <Link onClick={onClose}>
                             <MenuItem>
                               <HStack>
@@ -174,7 +172,7 @@ import {
                                   size={18}
                                   color={menuProps.color}
                                 />
-                                <Text>Open Source</Text>
+                                <Text>Projects</Text>
                               </HStack>
                             </MenuItem>
                           </Link>

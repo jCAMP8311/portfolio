@@ -13,22 +13,22 @@ import { CareerTimeline } from "./career-timeline";
 import { FaGraduationCap, FaAward, FaMedal } from "react-icons/fa";
 import { BsFillBriefcaseFill } from "react-icons/bs";
 import Header from "../layout/header";
-// import Section from "../skills/section";
-// import { PageSlideFade } from "../ui/page-transitions";
+import Section from "../skills/section";
+import { PageSlideFade } from "../ui/page-transitions";
 
 const MyStory = ({ companies, institutes }:any) => {
 
   return (
     <VStack>
-      {/* <Section mb={14}> */}
-        {/* <PageSlideFade> */}
+      <Section mb={14}>
+        <PageSlideFade>
           <VStack>
             <Header mt={0} mb={1}>
               Career Journey
             </Header>
           </VStack>
-        {/* </PageSlideFade> */}
-      {/* </Section> */}
+        </PageSlideFade>
+      </Section>
       <VStack textAlign="start" align="flex-start" mb={0}>
         <Box>
           <CareerTimeline year={"2021"} index={0} />

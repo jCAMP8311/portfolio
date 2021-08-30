@@ -13,16 +13,11 @@ import {
   import { MotionBox, MotionFlex } from "../../components/ui/motion";
   import Header from "../../components/layout/header";
   import MyStory from "../Career Journey/career"
-  import Projects from "./projects";
   import NextLink from 'next/link'
   import { companies, institutes } from "../../data/data";
   
   const ANIMATION_DURATION = 0.5;
   const ORANGE = "#ff9400";
-  
-  // interface HomeProps {
-  //   projects: project[];
-  // }
 
   const Home: React.FC<any> = () => {
   
