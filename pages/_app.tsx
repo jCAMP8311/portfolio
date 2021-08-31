@@ -5,6 +5,7 @@ import AppLayout from "../components/layout/appLayout";
 import { useRouter } from "next/router";
 // import * as gtag from "lib/gtag";
 import { AnimatePresence } from "framer-motion";
+import customTheme from '../components/theme'
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -19,7 +20,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   // }, [router.events]);
 
   return (
-    <ChakraProvider >
+    <ChakraProvider theme={customTheme}>
       <AppLayout>
         <AnimatePresence
           exitBeforeEnter

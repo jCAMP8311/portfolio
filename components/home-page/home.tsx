@@ -12,7 +12,7 @@ import {
   } from "@chakra-ui/react";
   import { MotionBox, MotionFlex } from "../../components/ui/motion";
   import Header from "../../components/layout/header";
-  import MyStory from "../Career Journey/career"
+  import MyStory from "../career-journey/career"
   import NextLink from 'next/link'
   import { companies, institutes } from "../../data/data";
   

@@ -3,7 +3,7 @@ export const companies = [
       title: "Target",
       alt: "Target image",
       role: "Engineer",
-      skills: ["typescript", "javascript", "react"],
+      skills: ["typescript", "javascript", "react", "nextjs"],
       period: "2020 - Present",
       logo: '/assets/images/logos/target.png',
       awards: [
@@ -49,7 +49,7 @@ export const companies = [
       title: "Equifax (TapQA contract)",
       alt: "Equifax image",
       role: "QA Engineer",
-      skills: [],
+      skills: ["jira"],
       period: "2018 - 2018",
       logo: '/assets/images/logos/equifax.png'
     },
@@ -57,7 +57,7 @@ export const companies = [
       title: "Portico Benefits Services (TapQA contract)",
       alt: "Portico image",
       role: "QA Engineer",
-      skills: [],
+      skills: ["SQL"],
       period: "2014 - 2017",
       logo: '/assets/images/logos/portico.jpg'
     },
@@ -65,14 +65,14 @@ export const companies = [
       title: "Tap|QA",
       alt: "TapQA image",
       role: "QA Engineer II",
-      skills: [],
+      skills: ["jira", "SQL"],
       period: "2014 - 2018",
       logo: '/assets/images/logos/tapqa.jpg'
     },    {
       title: "Activision",
       alt: "Activision image",
       role: "QA Tester - Microsoft TRG",
-      skills: [],
+      skills: ["jira"],
       period: "2012 - 2014",
       logo: '/assets/images/logos/activision.png'
     }
@@ -84,7 +84,7 @@ export const companies = [
       title: "ITT Technical Institute",
       alt: "ITT image",
       role: "Associates Degree - Visual Communicaton",
-      skills: [],
+      skills: ["3ds max"],
       period: "2010 - 2012",
       startingYear: "2010",
       logo: '/assets/images/logos/itt_tech.jpg',
