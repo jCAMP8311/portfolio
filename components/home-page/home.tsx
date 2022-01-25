@@ -3,7 +3,6 @@ import {
     Avatar,
     Box,
     Text,
-    Badge,
     Stack,
     Link,
     UnorderedList,
@@ -12,7 +11,7 @@ import {
   } from "@chakra-ui/react";
   import { MotionBox, MotionFlex } from "../../components/ui/motion";
   import Header from "../../components/layout/header";
-  import MyStory from "../career-journey/career"
+  import CareerJourney from "../career-journey/career"
   import NextLink from 'next/link'
   import { companies, institutes } from "../../data/data";
   
@@ -88,21 +87,6 @@ import {
             </Box>
           </MotionFlex>
         </Flex>
-        <MotionBox
-          w="100%"
-          opacity="0"
-          initial={{
-            translateY: 80
-          }}
-          animate={{
-            translateY: 0,
-            opacity: 1,
-            transition: {
-              delay: ANIMATION_DURATION - 0.1,
-              duration: ANIMATION_DURATION
-            }
-          }}
-        >
           <Box mt={10}>
             <Stack
               mb={10}
@@ -144,9 +128,8 @@ import {
                 </ListItem>
               </UnorderedList>
             </Stack>
-            <MyStory companies={companies} institutes={institutes} />
+            <CareerJourney companies={companies} institutes={institutes} />
           </Box>
-        </MotionBox>
       </Flex>
     );
   };

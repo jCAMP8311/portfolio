@@ -44,7 +44,6 @@ export const CareerTimeline: React.FC<CareerTimelineProps> = ({
           onClose={close}
           placement={index % 2 === 0 ? "right" : "left"}
           closeOnBlur={false}
-          // variant="responsive"
         >
           <PopoverTrigger>
             <Box onClick={open} position="relative">
@@ -81,7 +80,6 @@ export const CareerTimeline: React.FC<CareerTimelineProps> = ({
             {!year && (
               <PopoverContent padding={["0.2rem", "0.2rem", "0.7rem"]}>
                 <PopoverArrow />
-                {/* <PopoverCloseButton /> */}
                 <PopoverBody>
                   <Box overflow="auto">{children}</Box>
                 </PopoverBody>

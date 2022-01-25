@@ -16,7 +16,7 @@ import Header from "../layout/header";
 import Section from "../skills/section";
 import { PageSlideFade } from "../ui/page-transitions";
 
-const MyStory = ({ companies, institutes }:any) => {
+const CareerJourney = ({ companies, institutes }:any) => {
 
   return (
     <VStack>
@@ -169,4 +169,4 @@ const MyStory = ({ companies, institutes }:any) => {
   );
 };
 
-export default MyStory;
+export default CareerJourney;

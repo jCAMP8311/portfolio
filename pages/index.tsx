@@ -1,5 +1,5 @@
 import Home from "../components/home-page/home";
-import MyStory from "../components/career-journey/career";
+import CareerJourney from "../components/career-journey/career";
 import { companies, institutes } from "../data/data";
 import PageLayout from "../components/layout/pageLayout";
 
@@ -13,10 +13,10 @@ const Index = () => {
 
 export default Index;
 
-// export function getStaticProps() {
-//   return {
-//     props: {
-//       companies, institutes
-//     },
-//   };
-// }
+export function getStaticProps() {
+  return {
+    props: {
+      companies, institutes
+    },
+  };
+}

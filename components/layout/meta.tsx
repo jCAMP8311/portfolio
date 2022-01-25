@@ -24,7 +24,7 @@ const Meta = ({ title, keywords, description, image } : Props): JSX.Element => {
 Meta.defaultProps = {
   title: "Josh Campbell - Front End Engineer",
   keywords: "web development, programming, web design",
-  description: "Software Engineer. Lover of web design."
+  description: "Software Engineer. Web dev extraordinaire."
 };
 
 export default Meta;
