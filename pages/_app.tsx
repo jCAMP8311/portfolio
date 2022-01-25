@@ -3,21 +3,23 @@ import App, { AppContext, AppProps } from "next/app";
 import { ChakraProvider, Box } from "@chakra-ui/react";
 import AppLayout from "../components/layout/appLayout";
 import { useRouter } from "next/router";
-// import * as gtag from "lib/gtag";
+import * as gtag from "../lib/gtag";
 import { AnimatePresence } from "framer-motion";
 import customTheme from '../components/theme'
 
+const isProduction = process.env.NODE_ENV === "production";
+
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
-  // useEffect(() => {
-  //   const handleRouteChange = url => {
-  //     gtag.pageview(url);
-  //   };
-  //   router.events.on("routeChangeComplete", handleRouteChange);
-  //   return () => {
-  //     router.events.off("routeChangeComplete", handleRouteChange);
-  //   };
-  // }, [router.events]);
+  useEffect(() => {
+    const handleRouteChange = (url: any) => {
+      if (isProduction) gtag.pageview(url);
+    };
+    router.events.on("routeChangeComplete", handleRouteChange);
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, [router.events]);
 
   return (
     <ChakraProvider theme={customTheme}>

@@ -1,5 +1,4 @@
 import Home from "../components/home-page/home";
-import CareerJourney from "../components/career-journey/career";
 import { companies, institutes } from "../data/data";
 import PageLayout from "../components/layout/pageLayout";
 

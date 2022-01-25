@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { GA_TRACKING_ID } from '../../lib/gtag';
 
 type Props = {
     title: string;
@@ -6,6 +7,8 @@ type Props = {
     keywords?: string;
     image?: string;
   };
+
+const isProduction = process.env.NODE_ENV === "production";
 
 const Meta = ({ title, keywords, description, image } : Props): JSX.Element => {
   return (
@@ -17,6 +20,27 @@ const Meta = ({ title, keywords, description, image } : Props): JSX.Element => {
       <meta property="og:title" content={title} />
       <meta property="og:image" content={image ? image : "/logo512.png"} />
       <title>{title}</title>
+      {isProduction && (
+        <>
+          <script
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+          />
+          <script
+            // eslint-disable-next-line react/no-danger
+            dangerouslySetInnerHTML={{
+              __html: `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '${GA_TRACKING_ID}', {
+          page_path: window.location.pathname,
+        });
+      `,
+            }}
+          />
+        </>
+      )}
     </Head>
   );
 };
